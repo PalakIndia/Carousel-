@@ -1,104 +1,142 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    font-family: sans-serif;
-    background-color: rgb(206, 206, 245);
+
+ *{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: sans-serif;
+ }
+
+ body{
+    background-color:rgb(204, 202, 252) ;
+
+ }
+
+ .container{
+     margin: 0 auto;
+ }
+
+ h2{
+     display: grid;
+     justify-content: center;
+     margin: 2rem;
+ }
+
+ .profile-container{
+     margin:     auto;
+     width: 60%;
+     background-color: white;
+     box-shadow: 1px 5px 15px rgb(0, 0, 0);
+     border-radius: 10px;
+     display: none;
+ }
+
+ .profile-container img{
+     height: 150px;
+     width: 150px;
+     border-radius: 100px;
+     margin-top: 20px;
+     box-shadow: 12px -2px  rgb(113, 157, 214);
+ }
+
+.img-container{
+    display: grid;
+     justify-content: center;
+     margin-top: 20px;
 }
 
-h2{
-    top: 2rem;
+h4{
+    display: grid;
     justify-content: center;
-    position: relative;
-    text-align: center;
-    font-size: 2rem;
-    box-shadow: 3px 4px 25px rgb(161, 172, 192);
+    margin: 10px;
+    font-size: 1.5rem;
 }
-
-.container{
-width: 25rem;
-width: 40rem;
-margin: 0 auto;
-
-
-}
-
-.profile-container{
-    margin: 3rem auto;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 3px 4px 25px rgb(161, 172, 192);
-    border-radius: 10px;
-    padding: 3rem;
-        display:none;
-
-}
-
-.profile-container img{
-    height: 10rem;
-    width: 10rem;
-    border-radius: 10rem;
-    margin-left: 12rem  ;
-    box-shadow:   10px -5px  rgb(59, 147, 187);
-}
-
-.profile-container h4 {
-    text-align: center;
-    margin: 1rem;
-}
-
-.profile-container h6{
-    text-align: center;
-    font-size: .9rem;
+h6{
+    display: grid;
+    justify-content: center;
+    margin: 10px;
+    color: rgb(79, 101, 173);
     font-weight: 500;
-    margin:  1rem auto;
-    color: rgb(112, 112, 209);
+    font-size: .8rem;
 }
 
-.icons{
+p{
+    display: grid;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    top:15px;
+    width: 90%;
+}
+
+.icons,.fas{
     display: flex;
     justify-content: center;
-    position: relative;
-    top: 1rem;
-}
-
-.fas{
-    margin: 1rem;
+    margin: 20px;
 }
 
 
-
-.like{
-    position: relative;
-    top:3rem;
-    font-size: 1.5rem;
-    left: 5rem;
+.btn,button{
+    display: grid;
+    justify-content: center;
+    padding: .5rem;
 }
-  
 button{
-    height: 2rem;
-    width: 7rem;
-    background-color: rgb(187, 187, 241);
-    border: 1px solid #0d0d6b;
+    width: 100px;
+    border: 1px solid blue;
     cursor: pointer;
+    background: transparent;
     position: relative;
-    margin: 1rem 14rem auto;
-    overflow: hidden;
-    transition: ease-out 0.3s;
+    top: -2rem;
 }
 
 button:hover{
-    border: 1px solid rgb(13, 13, 107);
-    box-shadow: inset 7rem 0 0 0 #38386b;
+    box-shadow: inset 100px 0 0 0 rgb(111, 111, 185);
+    transition: .4s;
     color: white;
 }
 
-
-a{
-    margin: 0 28rem auto;
-    top: -1.5rem;
+.like{
     position: relative;
-    color: rgb(140, 0, 255);
+    top: 6px;
+    left: 20%;
+    font-size: 1.5rem;
 }
 
+a{
+    position: relative;
+    left: 70%;
+    top: -4rem;
+}
+
+
+@media screen and (max-width:672px){
+    .profile-container{
+        width: 80%;
+        height: 80vh;
+    }
+
+   .footer-container{
+       position: relative;
+       top: -25px;
+   }
+}
+
+@media screen and (max-width:500px){
+    .profile-container{
+        height: 75vh;
+    }
+    .img-container img{
+        height: 100px;
+        width: 100px;
+    }
+
+    p{
+        font-size: .9rem;
+    }
+
+    .like{
+        position: relative;
+        left: 40px;
+        bottom: 6px;
+    }
+}
