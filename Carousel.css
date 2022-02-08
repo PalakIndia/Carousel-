@@ -72,6 +72,7 @@ p{
     display: flex;
     justify-content: center;
     margin: 20px;
+    margin-top:-70px
 }
 
 
@@ -108,35 +109,69 @@ a{
     top: -4rem;
 }
 
-
-@media screen and (max-width:672px){
-    .profile-container{
-        width: 80%;
-        height: 80vh;
-    }
-
-   .footer-container{
-       position: relative;
-       top: -25px;
-   }
+.footer-container {
+    margin-top: 70px;
 }
 
-@media screen and (max-width:500px){
-    .profile-container{
-        height: 75vh;
-    }
-    .img-container img{
-        height: 100px;
-        width: 100px;
-    }
 
+
+
+@media screen and (max-width:993px){
     p{
         font-size: .9rem;
     }
 
-    .like{
-        position: relative;
-        left: 40px;
-        bottom: 6px;
+    .profile-container{
+        margin-top: 10px;
     }
+
+    .img-container img{
+        height: 120px;
+        width: 120px;
+    }
+
+    .icons{
+        position: relative;
+        top: -70px;
+    }
+
+    .fas{
+        margin: 2.5rem;
+    }
+
+    .footer-container{
+        top: 20px;
+        position: relative;
+    }
+}
+
+@media screen and (max-width:573px){
+    .profile-container{
+        height: 450px;
+        width: 80vw;
+    }
+}
+
+
+@media screen and (max-width:340px){
+    .like{
+        font-size: 1.3rem;
+        position: relative;
+        top: -10px;
+        left: 30px;
+        }
+
+        button{
+            width: 80px;
+            position: relative;
+            height: 30px;
+            top: -45px;      
+          }
+          a{
+            font-size: .8rem;
+            position: relative;
+            top: -80px;        
+          }
+
+
 }
