@@ -23,11 +23,6 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sequi rem natus voluptatibus error.
                 Distinctio, fugit! Odio, fugit repellat! Quam voluptas, accusantium voluptatibus incidunt facilis cum
                 blanditiis illo aspernatur unde.</p>
-            <div class="icons">
-                <i class="fas fa-chevron-left" d="next"></i>
-                <i class="fas fa-chevron-right" d="prev"></i>
-            </div>
-            
             <div class="footer-container">
                 <div class="like"><i class="far fa-heart"></i></div>
                 <div class="btn"><button>Contact</button></div>
@@ -39,18 +34,13 @@
             <div class="img-container">
             <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/gzZpBDV3nX1AWytfLhbgs/d528553697d959544c8ca5b80b6d8beb/web_developer.png?w=1500&h=680&q=60&fit=fill&f=faces&fm=jpg&fl=progressive&auto=format%2Ccompress&dpr=1&w=1000&h="
                 alt=""></div>
-            <h4>Susan Smith</h4>
+            <h4>Andrew Johnson</h4>
             <h6>WEB DEVELOPER</h6>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sequi rem natus voluptatibus error.
                 Distinctio, fugit! Odio, fugit repellat! Quam voluptas, accusantium voluptatibus incidunt facilis cum
                 blanditiis illo aspernatur unde.
 
             </p>
-
-            <div class="icons">
-                <i class="fas fa-chevron-left next"></i>
-                <i class="fas fa-chevron-right prev"></i>
-            </div> 
             <div class="footer-container">
                 <div class="like"><i class="far fa-heart"></i></div>
                 <div class="btn"><button>Contact</button></div>
@@ -62,18 +52,12 @@
             <div class="img-container">
             <img src="https://196034-584727-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2019/04/Dan-Clark-Software-Engineer-Round.jpg"
                 alt=""></div>
-            <h4>Susan Smith</h4>
+            <h4>Brian Miller</h4>
             <h6>WEB DEVELOPER</h6>
 
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sequi rem natus voluptatibus error.
                 Distinctio, fugit! Odio, fugit repellat! Quam voluptas, accusantium voluptatibus incidunt facilis cum
                 blanditiis illo aspernatur unde.</p>
-
-                <div class="icons">
-                    <i class="fas fa-chevron-left next"></i>
-                    <i class="fas fa-chevron-right prev"></i>
-                </div>
-
                 <div class="footer-container">
                     <div class="like"><i class="far fa-heart"></i></div>
                     <div class="btn"><button>Contact</button></div>
@@ -85,24 +69,56 @@
             <div class="img-container">
             <img src="https://t4.ftcdn.net/jpg/03/39/53/13/360_F_339531358_ydG0IxRqQj6iGG0ddAnRExu9lLpGhUdV.jpg" alt="">
             </div>
-            <h4>Susan Smith</h4>
+            <h4>Sophie Wilson</h4>
             <h6>WEB DEVELOPER</h6>
-            </p> ipsum dolor sit amet consectetur adipisicing elit. Maxime sequi rem natus voluptatibus error.
+            <p> ipsum dolor sit amet consectetur adipisicing elit. Maxime sequi rem natus voluptatibus error.
             Distinctio, fugit! Odio, fugit repellat! Quam voluptas, accusantium voluptatibus incidunt facilis cum
             blanditiis illo aspernatur unde.</p>
-            <div class="icons">
-                <i class="fas fa-chevron-left  next"></i>
-                <i class="fas fa-chevron-right prev"></i>
-            </div>
             <div class="footer-container">
                 <div class="like"><i class="far fa-heart"></i></div>
                 <div class="btn"><button>Contact</button></div>
                 <a href="http://" target="_blank">Feedback</a>
            </div>
         </div>
-
+        <div class="icons">
+            <i class="fas fa-chevron-left next"></i>
+            <i class="fas fa-chevron-right prev" ></i>
+        </div>
     </div>
 </body>
-<script src="Carousel.js">
+<script>
+    let prev = document.querySelector('.prev');
+let next = document.querySelector('.next');
+
+let rev = 0;
+carousel(rev);
+
+
+prev.addEventListener('click',() =>{
+    rev = rev - 1;
+    carousel(rev);
+});
+
+next.addEventListener('click',() =>{
+    rev = rev + 1;
+    carousel(rev);
+});
+
+function carousel(reverse){
+    let container = document.getElementsByClassName('profile-container');
+    if (reverse >= container.length) {
+        reverse = 0;
+        rev = 0;
+    }
+    if (reverse < 0) {
+        reverse = container.length - 1;
+        rev = container.length - 1;
+    }
+    for (let i = 0; i < container.length; i++) {
+        container[i].style.display = "none";
+    }
+    container[reverse].style.display = "block";
+}   
+
 </script>
 </html>
